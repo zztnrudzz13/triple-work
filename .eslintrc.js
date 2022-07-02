@@ -9,6 +9,16 @@ const { extends: extendConfigs } = createConfig({
 
 module.exports = {
   extends: [...extendConfigs, 'plugin:@typescript-eslint/recommended'],
+  settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
+    'import/resolver': {
+      typescript: {
+        project: ['tsconfig.json', 'package/tsconfig.json'],
+      },
+    },
+  },
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
