@@ -14,7 +14,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@app.layout/*": ["src/app.layout/*"],
+      "@app.feature/*": ["src/app.feature/*"],
+      "@app.modules/*": ["src/app.modules/*"],
+      "@app.styles/*": ["src/app.styles/*"],
+      "@public/*": ["public/*"],
+    },
   },
-  "include": ["src"]
+  "include": ["src", "index.d.ts"],
+  "exclude": [ "**/*.json", "**/*.yaml", "**/*.md" ]
 }
