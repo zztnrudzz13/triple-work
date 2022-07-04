@@ -1,7 +1,22 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
 
 import ImageIndicator from '../components/ImageIndicator'
 import TextIndicator from '../components/TextIndicator'
+
+const appearAnimation = css`
+  animation: appear 700ms ease-in-out;
+    @keyframes appear {
+      from {
+        opacity: 0.1;                                                          
+        transform: translateY(25px)
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0px)
+      }
+    }
+`
 
 const IndicatorWrapper = styled.div`
   width: 100%;
@@ -13,7 +28,7 @@ const IndicatorWrapper = styled.div`
   .body-container {
     display: flex;
     height: auto;
-    gap: 17rem;
+    gap: 13rem;
   }
   .logo-container {
     position: relative;
@@ -25,24 +40,29 @@ const IndicatorWrapper = styled.div`
       bottom: 0;
       margin-bottom: 3.125rem;
     }
+    ${appearAnimation}
     .triple-logo-image {
-      width: 26rem;
-      height: 22.75rem;
+      width: 25rem;
+      height: 22rem;
     }
   }
   .text-and-image-indicator-container {
     display: flex;
     flex-direction: column;
-    gap: 3.5rem;
+    gap: 3rem;
     .text-indicator-container {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.5rem;
+      ${appearAnimation}
+      animation-delay: 100ms;
     }
     .image-indicator-container {
       display: flex;
       gap: 2.5rem;
+      ${appearAnimation}
+      animation-delay: 200ms;
     }
   }
 `
@@ -59,9 +79,9 @@ const Indicator = () => {
 
       <section className='text-and-image-indicator-container'>
         <div className='text-indicator-container'>
-          <TextIndicator boldText="350만 명" lightText='의 사용자' />
-          <TextIndicator boldText="21만 개" lightText='의 리뷰' />
-          <TextIndicator boldText="650만 개" lightText='의 저장' />
+          <TextIndicator num={50} boldText="만 명" lightText='의 사용자' />
+          <TextIndicator num={21} boldText="만 개" lightText='의 리뷰' />
+          <TextIndicator num={83} boldText="만 개" lightText='의 저장' />
         </div>
         <div className='image-indicator-container'>
           <ImageIndicator
@@ -73,7 +93,7 @@ const Indicator = () => {
           <ImageIndicator
             imagePath='/assets/badgeApple.png'
             alt="play-store"
-            place='2018 애플 엡스토어'
+            place='2018 애플 앱스토어'
             prize='오늘의 여행앱 선정'
           />
         </div>
