@@ -1,18 +1,4 @@
-import styled from '@emotion/styled'
-
-const ImageIndicatorWrapper = styled.div`
-  display: flex;
-  gap: 0.5rem;
-  img {
-    width: 3.75rem;
-  }
-  .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-`
+import { ImageIndicatorWrapper } from '../styles/ImageIndicatorStyle'
 
 type ImageIndicatorProps = {
   imagePath: string

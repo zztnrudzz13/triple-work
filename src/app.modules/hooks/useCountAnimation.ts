@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from 'react'
 
 type CountAnimationProps = {
   initialNumber: number
   endNumber: number
 }
 
-function useCountAnimation({initialNumber, endNumber }: CountAnimationProps) {
+function useCountAnimation({ initialNumber, endNumber }: CountAnimationProps) {
   const [count, setCount] = useState(initialNumber)
   const countRef = useRef<null | NodeJS.Timer>(null)
   const maxTime = 2000
@@ -17,8 +17,9 @@ function useCountAnimation({initialNumber, endNumber }: CountAnimationProps) {
       return
     }
     countRef.current = setInterval(() => {
-      const incrementCount = 1 - Math.pow(2, -10 * (++initialNumber / numberDivision))
-        setCount(Math.round(endNumber * incrementCount))
+      const incrementCount =
+        1 - Math.pow(2, -15 * (++initialNumber / numberDivision))
+      setCount(Math.round(endNumber * incrementCount))
     }, incrementMillisecond)
 
     if (count === endNumber) {

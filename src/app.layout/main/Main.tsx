@@ -4,7 +4,6 @@ import styled from '@emotion/styled'
 
 import Indicator from '../../app.feature/main/indicator/screen/Indicator'
 
-
 const MainWrapper = styled.div``
 
 const Main = () => {
