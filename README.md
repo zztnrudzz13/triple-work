@@ -1,70 +1,16 @@
-# Getting Started with Create React App
+# Triple 사전과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+안녕하세요, 프론트엔드 개발자 박수경입니다.  
+트리플 사전과제 제출합니다.
 
-## Available Scripts
+🔸 **아래 링크를 클릭하면 결과물을 미리 보실 수 있습니다.**  
+미리보기 > https://sukyeong-triple-work.netlify.app
 
-In the project directory, you can run:
+<br>
+프로젝트를 로컬에 클론 받으신 후, <code>npm start</code>를 터미널에 입력해주시면 웹에서 결과물을 확인하실 수 있습니다.
 
-### `npm start`
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🔸 **기술 스택**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- emotion: css-in-js로 기존에는 styled-components를 사용하였는데, emotion이 styled-components보다 조금 더 라이브러리 사이즈가 작고 빠르다는 장점이 있어서 사용하게 되었습니다. 둘 사이의 큰 차이가 뚜렷하게 드러나는 것은 아니지만 emotion이 인라인 styling에 더 용이하다는 점과 SSR 환경에서 사용이 더 편리하다는 특징이 있습니다. 원래 코드를 적을 떄 style을 <code>export default </code> 코드 아래에 적지만, 린트에러로 인해 style을 상위에 적으면서 코드 가독성이 낮아지는 거 같아서 다른 파일로 분리해두었습니다.
